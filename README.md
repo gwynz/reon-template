@@ -4,10 +4,10 @@ Reon is a Next.js + Tailwind CSS + TypeScript starter packed with useful develop
 
 ## Features
 
-- ⚡️ Next.js 14 with App Router
-- ⚛️ React 18
+- ⚡️ Next.js 15 with App Router
+- ⚛️ React 19
 - ✨ TypeScript
-- 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
+- 💨 Tailwind CSS 4
 - 💨 Shadcn - Component custom ui
 - 💎 Pre-built Components — Components that adapt to your brand color
 - 🃏 Jest — Configured for unit testing
