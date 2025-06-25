@@ -1,12 +1,8 @@
 "use client";
 import * as React from "react";
-import { RiAlarmWarningFill } from "react-icons/ri";
-
-import TextButton from "@/components/buttons/TextButton";
 
 export default function Error({
 	error,
-	reset,
 }: {
 	error: Error & { digest?: string };
 	reset: () => void;

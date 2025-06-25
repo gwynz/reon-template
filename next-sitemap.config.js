@@ -4,7 +4,7 @@
  */
 module.exports = {
 	// !STARTERCONF Change the siteUrl
-	/** Without additional '/' on the end, e.g. https://theodorusclarence.com */
+	/** Without additional '/' on the end, e.g. https://gwynz.com */
 	siteUrl: "https://localhost:3000",
 	generateRobotsTxt: true,
 	robotsTxtOptions: {

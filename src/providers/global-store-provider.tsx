@@ -1,12 +1,12 @@
 "use client";
 
-import { type ReactNode, createContext, useRef, useContext } from "react";
+import { createContext, type ReactNode, useContext, useRef } from "react";
 import { useStore } from "zustand";
 
 import {
-	type GlobalStore,
 	createGlobalStore,
 	defaultGlobalState,
+	type GlobalStore,
 } from "@/stores/global";
 
 export type GlobalStoreApi = ReturnType<typeof createGlobalStore>;
@@ -20,7 +20,7 @@ export interface GlobalStoreProviderProps {
 }
 
 const InitDataComponent = ({ children }: { children: ReactNode }) => {
-	return <></>;
+	return <>{children}</>;
 };
 
 export const GlobalStoreProvider = ({ children }: GlobalStoreProviderProps) => {

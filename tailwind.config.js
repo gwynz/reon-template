@@ -1,7 +1,7 @@
-import type { Config } from "tailwindcss";
+import forms from "@tailwindcss/forms";
+import scrollbar from "tailwind-scrollbar";
 
 export default {
-	darkMode: ["class"],
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
 		extend: {
@@ -12,5 +12,5 @@ export default {
 			},
 		},
 	},
-	plugins: [require("@tailwindcss/forms"), require("tailwind-scrollbar")],
-} satisfies Config;
+	plugins: [forms, scrollbar],
+};

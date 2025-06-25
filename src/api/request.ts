@@ -8,7 +8,7 @@ export const request = new Api({
 			headers: {
 				Authorization: token ? `Bearer ${token}` : "",
 			},
-		} as RequestParams),
+		}) as RequestParams,
 });
 
 export const setApiAccessToken = (token: string | null) => {

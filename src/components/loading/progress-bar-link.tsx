@@ -4,8 +4,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ReactNode, startTransition } from "react";
 
-import { useProgressBar } from "./progress-bar";
 import { cn } from "@/lib/utils";
+
+import { useProgressBar } from "./progress-bar";
 
 export default function ProgressBarLink({
 	href,

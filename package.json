@@ -1,5 +1,5 @@
 {
-	"name": "ai-tools-hub",
+	"name": "reon-template",
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
@@ -15,9 +15,11 @@
 		"format": "prettier -w .",
 		"format:check": "prettier -c .",
 		"postbuild": "next-sitemap --config next-sitemap.config.js",
-		"prepare": "husky install"
+		"prepare": "husky"
 	},
 	"dependencies": {
+		"@eslint/eslintrc": "^3.3.1",
+		"@eslint/js": "^9.29.0",
 		"@hookform/resolvers": "^5.1.1",
 		"@radix-ui/react-avatar": "^1.1.10",
 		"@radix-ui/react-dialog": "^1.1.14",
@@ -43,6 +45,7 @@
 		"embla-carousel-autoplay": "^8.6.0",
 		"embla-carousel-react": "^8.6.0",
 		"framer-motion": "^12.19.1",
+		"globals": "^16.2.0",
 		"input-otp": "^1.4.2",
 		"lodash": "^4.17.21",
 		"lucide-react": "^0.523.0",
@@ -73,6 +76,7 @@
 		"eslint": "^9.29.0",
 		"eslint-config-next": "^15.3.4",
 		"eslint-config-prettier": "^10.1.5",
+		"eslint-plugin-next": "^0.0.0",
 		"eslint-plugin-simple-import-sort": "^12.1.1",
 		"eslint-plugin-unused-imports": "^4.1.4",
 		"husky": "^9.1.7",
