@@ -5,6 +5,7 @@ import { categoryData } from "@/_mock/articles";
 import UnderlineLink from "@/components/links/UnderlineLink";
 import HorizontalDivider from "@/components/common/horizontal-divider";
 import VerticalDivider from "@/components/common/vertical-divider";
+import GoodSaleSection from "@/app/(index)/components/good-sale-section";
 import TopClickedSection from "@/app/(index)/components/top-clicked-section";
 
 export default async function HomePage() {
@@ -46,8 +47,12 @@ export default async function HomePage() {
 
 			<HorizontalDivider className="mt-8" />
 
-			{/* <TopClickedSection /> */}
+			{/* <GoodSaleSection /> */}
 			<TopClickedSection />
+			<HorizontalDivider className="mt-8" />
+
+			{/* <GoodSaleSection /> */}
+			<GoodSaleSection />
 			<HorizontalDivider className="mt-8" />
 
 			{/* Category sections */}
