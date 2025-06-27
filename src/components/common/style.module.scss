@@ -1,0 +1,11 @@
+.horizontalDivider {
+	background-image: linear-gradient(to left, #000 0, #000 25%, transparent 25%);
+	background-position: 0 bottom;
+	background-size: 6px 1px;
+}
+
+.verticalDivider {
+	background-image: linear-gradient(to top, #000 0, #000 25%, transparent 25%);
+	background-position: left;
+	background-size: 1px 6px;
+}

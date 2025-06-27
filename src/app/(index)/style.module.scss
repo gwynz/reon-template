@@ -1,0 +1,12 @@
+.relatedLink {
+	&:before {
+		background-image: url("/svg/icons/curbed-arrow.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: "";
+		flex: 0 0 auto;
+		height: 14px;
+		margin: 0 12px 0 0;
+		width: 18px;
+	}
+}
