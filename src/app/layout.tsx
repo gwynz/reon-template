@@ -41,6 +41,7 @@ export const metadata: Metadata = {
 	},
 };
 import { Toaster } from "@/components/ui/sonner";
+import HomeLayout from "@/components/layout/home-layout";
 
 export default async function RootLayout({
 	children,
@@ -50,7 +51,9 @@ export default async function RootLayout({
 	return (
 		<html>
 			<body>
-				<Providers>{children}</Providers>
+				<Providers>
+					<HomeLayout>{children}</HomeLayout>
+				</Providers>
 				<Toaster />
 			</body>
 		</html>

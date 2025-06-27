@@ -1,16 +1,20 @@
-import forms from "@tailwindcss/forms";
-import scrollbar from "tailwind-scrollbar";
-
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
 		extend: {
-			borderRadius: {
-				lg: "var(--radius)",
-				md: "calc(var(--radius) - 2px)",
-				sm: "calc(var(--radius) - 4px)",
+			fontFamily: {
+				montserrat: ['"Montserrat", sans-serif'],
+				cooper: ['"CooperBTW01", sans-serif'],
+				futura: ['"Futura", sans-serif'],
+			},
+			colors: {
+				"c-belge": "#FFF1CA",
+				"c-yellow": "#FFB823",
+				"c-sage": "#708A58",
+				"c-green": "#2D4F2B",
 			},
 		},
 	},
-	plugins: [forms, scrollbar],
+	plugins: [require("@tailwindcss/forms"), require("tailwind-scrollbar")],
 };
