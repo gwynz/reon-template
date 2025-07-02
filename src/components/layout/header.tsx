@@ -2,6 +2,7 @@ import React from "react";
 import { Search, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import CategoryMenu from "@/components/layout/category-menu";
 
 const Header = () => {
 	return (
@@ -20,13 +21,6 @@ const Header = () => {
 							/>
 						</div>
 					</div>
-					{/* Logo */}
-					<div className="flex-shrink-0 mx-8">
-						<h1 className="text-3xl font-extrabold text-black font-montserrat">
-							REON
-						</h1>
-					</div>
-
 					{/* User actions */}
 					<div className="flex items-center justify-end flex-1 space-x-4">
 						<Button variant="outline">Log in</Button>
@@ -37,30 +31,36 @@ const Header = () => {
 				{/* Navigation */}
 				<nav className="border-t border-gray-100 ">
 					<div className="flex items-center justify-center py-4">
-						<div className="hidden space-x-8 md:flex">
-							{[
-								"Home & Garden",
-								"Kitchen",
-								"Health & Lifestyle",
-								"Tech",
-								"Baby & Kid",
-								"Style",
-								"Gifts",
-								"Podcast",
-								"Deals",
-							].map((item) => (
-								<a
-									key={item}
-									href="#"
-									className="text-xs font-medium text-black uppercase hover:underline"
-								>
-									{item}
-								</a>
-							))}
+						<div className="flex items-center justify-between w-full space-x-8">
+							{/* Category dropdown menu */}
+							<div className="flex items-center gap-2">
+								<CategoryMenu />
+								<h1 className="text-5xl font-extrabold text-black uppercase font-montserrat">
+									REON
+								</h1>
+							</div>
+							<div className="flex gap-4 justify-end flex-wrap text-[10px]">
+								{[
+									"Home & Garden",
+									"Kitchen",
+									"Health & Lifestyle",
+									"Tech",
+									"Baby & Kid",
+									"Style",
+									"Gifts",
+									"Podcast",
+									"Deals",
+								].map((item) => (
+									<a
+										key={item}
+										href="#"
+										className="font-medium text-black uppercase hover:underline"
+									>
+										{item}
+									</a>
+								))}
+							</div>
 						</div>
-						<button className="md:hidden">
-							<Menu className="w-6 h-6 text-gray-600" />
-						</button>
 					</div>
 				</nav>
 			</div>

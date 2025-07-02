@@ -1,12 +1,21 @@
 import VerticalDivider from "@/components/common/vertical-divider";
+import UnderlineLink from "@/components/links/UnderlineLink";
 import { Button } from "@/components/ui/button";
 import TagPriceDottedIcon from "~/svg/icons/tag-price-dotted.svg";
 export default function GoodSaleSection() {
 	return (
 		<div className="my-8">
-			<div className="flex items-center gap-3 pb-2 mb-4 text-3xl font-extrabold text-black border-black md:text-4xl border-b-3">
-				<TagPriceDottedIcon className="w-12 h-auto text-black" />
-				Very Good Sale
+			<div className="flex justify-between gap-2 pb-2 mb-4 border-black border-b-3">
+				<div className="flex items-center gap-3 text-3xl font-extrabold md:text-4xl">
+					<TagPriceDottedIcon className="w-12 h-auto " />
+					Very Good Sale
+				</div>
+				<div className="flex items-center gap-2">
+					Very good deals on our favorite things{"  |  "}
+					<UnderlineLink href="#" className="text-base">
+						See all articles →
+					</UnderlineLink>
+				</div>
 			</div>
 
 			<div className="flex items-center gap-8 pt-6">

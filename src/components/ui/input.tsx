@@ -23,7 +23,7 @@ function Input({
 			{LeftIcon && (
 				<LeftIcon
 					className={cn(
-						"absolute left-3 h-4 w-4 text-muted-foreground",
+						"absolute left-3 h-4 w-4 text-muted-foreground cursor-pointer",
 						props.disabled && "opacity-50",
 						leftIconClassName
 					)}
@@ -46,7 +46,7 @@ function Input({
 			{RightIcon && (
 				<RightIcon
 					className={cn(
-						"absolute right-3 h-4 w-4 text-muted-foreground",
+						"absolute right-3 h-4 w-4 text-muted-foreground cursor-pointer",
 						props.disabled && "opacity-50",
 						rightIconClassName
 					)}

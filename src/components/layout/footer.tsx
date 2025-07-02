@@ -1,6 +1,11 @@
 import React from "react";
-import { Facebook, Twitter, Instagram, Youtube, Rss } from "lucide-react";
 import HorizontalDivider from "@/components/common/horizontal-divider";
+import XIcon from "~/svg/icons/x.svg";
+import InstagramIcon from "~/svg/icons/instagram.svg";
+import YoutubeIcon from "~/svg/icons/youtube.svg";
+import TiktokIcon from "~/svg/icons/tiktok.svg";
+import TelegramIcon from "~/svg/icons/telegram.svg";
+import FacebookIcon from "~/svg/icons/facebook.svg";
 
 const Footer = () => {
 	return (
@@ -13,7 +18,7 @@ const Footer = () => {
 				</div>
 
 				{/* Main navigation links */}
-				<div className="flex flex-wrap items-center justify-center mb-12 text-sm gap-x-8 gap-y-4">
+				<div className="flex flex-wrap items-center justify-center mb-12 text-xs gap-x-8 gap-y-4">
 					{[
 						"Beauty",
 						"Home",
@@ -37,31 +42,22 @@ const Footer = () => {
 				{/* Social media icons */}
 				<div className="flex justify-center mb-12 space-x-4">
 					<div className="flex items-center justify-center w-10 h-10 bg-black rounded-full cursor-pointer hover:bg-gray-800">
-						<Facebook className="w-5 h-5 text-white" />
+						<FacebookIcon className="w-5 h-5 text-white" />
 					</div>
 					<div className="flex items-center justify-center w-10 h-10 bg-black rounded-full cursor-pointer hover:bg-gray-800">
-						<Twitter className="w-5 h-5 text-white" />
+						<InstagramIcon className="w-5 h-5 text-white" />
 					</div>
 					<div className="flex items-center justify-center w-10 h-10 bg-black rounded-full cursor-pointer hover:bg-gray-800">
-						<Instagram className="w-5 h-5 text-white" />
+						<TelegramIcon className="w-5 h-5 text-white" />
 					</div>
 					<div className="flex items-center justify-center w-10 h-10 bg-black rounded-full cursor-pointer hover:bg-gray-800">
-						<div className="flex items-center justify-center w-5 h-5 bg-white rounded-full">
-							<div className="w-3 h-3 bg-black rounded-full"></div>
-						</div>
+						<TiktokIcon className="w-5 h-5 text-white" />
 					</div>
 					<div className="flex items-center justify-center w-10 h-10 bg-black rounded-full cursor-pointer hover:bg-gray-800">
-						<div className="flex items-center justify-center w-5 h-5 text-xs font-bold text-white">
-							T
-						</div>
+						<XIcon className="w-5 h-5 text-white" />
 					</div>
 					<div className="flex items-center justify-center w-10 h-10 bg-black rounded-full cursor-pointer hover:bg-gray-800">
-						<div className="flex items-center justify-center w-5 h-5 text-xs font-bold text-white">
-							M
-						</div>
-					</div>
-					<div className="flex items-center justify-center w-10 h-10 bg-black rounded-full cursor-pointer hover:bg-gray-800">
-						<Rss className="w-5 h-5 text-white" />
+						<YoutubeIcon className="w-5 h-5 text-white" />
 					</div>
 				</div>
 
@@ -83,20 +79,7 @@ const Footer = () => {
 						<a
 							key={item}
 							href="#"
-							className="tracking-wider text-gray-600 uppercase hover:text-c-yellow"
-						>
-							{item}
-						</a>
-					))}
-				</div>
-
-				{/* Additional links */}
-				<div className="flex flex-wrap items-center justify-center mb-8 text-xs gap-x-6 gap-y-2">
-					{["ACCESSIBILITY", "MANAGE PRIVACY SETTINGS"].map((item) => (
-						<a
-							key={item}
-							href="#"
-							className="tracking-wider text-gray-600 uppercase hover:text-c-yellow"
+							className="tracking-wider text-gray-600 uppercase hover:text-c-yellow text-[10px]"
 						>
 							{item}
 						</a>

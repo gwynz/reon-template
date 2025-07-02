@@ -1,8 +1,8 @@
 import React from "react";
-import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HorizontalDivider from "@/components/common/horizontal-divider";
 import TagSaleIcon from "~/svg/icons/tag-sale.svg";
+import { cn } from "@/lib/utils";
 
 const DailyDeals = () => {
 	const deals = [
@@ -13,7 +13,7 @@ const DailyDeals = () => {
 			source: "from Amazon",
 			note: "(one unit)",
 			image:
-				"https://images.pexels.com/photos/4183769/pexels-photo-4183769.jpeg?auto=compress&cs=tinysrgb&w=200",
+				"https://images.pexels.com/photos/4691567/pexels-photo-4691567.jpeg?auto=compress&cs=tinysrgb&w=600",
 			category: "Tech",
 		},
 		{
@@ -26,17 +26,6 @@ const DailyDeals = () => {
 			image:
 				"https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=200",
 			category: "Travel",
-		},
-		{
-			title: "Levi's Premium 501 Original Fit Women's Jeans",
-			price: "$59",
-			originalPrice: "$98",
-			source: "from Levi's",
-			note: "Free Red Tab membership required",
-			dealNote: "(deal on medium or black washes)",
-			image:
-				"https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=200",
-			category: "Fashion",
 		},
 		{
 			title: "Levi's Premium 501 Original Fit Women's Jeans",
@@ -63,47 +52,97 @@ const DailyDeals = () => {
 			</p>
 
 			<div className="space-y-4">
-				{deals.map((deal, index) => (
-					<div key={index}>
-						<div className="cursor-pointer group">
-							{/* Product image */}
-							<div className="p-3 mx-auto mb-4 overflow-hidden transition-colors border border-black border-dotted rounded-full max-w-44">
-								<img
-									src={deal.image}
-									alt={deal.title}
-									className="object-cover w-full h-full rounded-full aspect-square group-hover:opacity-90"
-								/>
-							</div>
-
-							{/* Product info */}
-							<div className="space-y-2 text-center">
-								<div className="mx-auto font-semibold tracking-widest text-gray-700 w-fit shadow-underline">
-									{deal.category}
-								</div>
-								<h3 className="font-semibold text-black transition-colors">
-									<span className="group-hover:shadow-underline">
-										{deal.title}
-									</span>
-								</h3>
-
-								<div className="flex items-center justify-center space-x-2">
-									<span className="text-lg font-bold text-c-green">
-										{deal.price}
-									</span>
-									<span className="text-sm text-gray-500 line-through">
-										{deal.originalPrice}
-									</span>
-									<span className="text-sm text-gray-600">{deal.source}</span>
+				{deals &&
+					deals.length > 0 &&
+					deals.slice(0, 1).map((deal, index) => (
+						<div key={index}>
+							<div className="cursor-pointer group">
+								{/* Product image */}
+								<div className="p-3 mx-auto mb-4 overflow-hidden border border-black border-dashed rounded-full max-w-80">
+									<img
+										src={deal.image}
+										alt={deal.title}
+										className="object-cover w-full h-full rounded-full aspect-square group-hover:opacity-90"
+									/>
 								</div>
 
-								{deal.note && (
-									<p className="text-sm text-gray-600">{deal.note}</p>
-								)}
+								{/* Product info */}
+								<div className="space-y-2 text-center">
+									<div className="mx-auto font-semibold tracking-widest text-gray-700 w-fit shadow-underline">
+										{deal.category}
+									</div>
+									<h3 className="font-semibold text-black transition-colors">
+										<span className="group-hover:shadow-underline">
+											{deal.title}
+										</span>
+									</h3>
+
+									<div className="flex items-center justify-center space-x-2">
+										<span className="text-lg font-bold text-c-green">
+											{deal.price}
+										</span>
+										<span className="text-sm text-gray-500 line-through">
+											{deal.originalPrice}
+										</span>
+										<span className="text-sm text-gray-600">{deal.source}</span>
+									</div>
+
+									{deal.note && (
+										<p className="text-sm text-gray-600">{deal.note}</p>
+									)}
+								</div>
 							</div>
+							<HorizontalDivider className="pl-8 mt-3" />
 						</div>
-						<HorizontalDivider className="pl-8 mt-3" />
-					</div>
-				))}
+					))}
+				{deals &&
+					deals.length > 2 &&
+					deals.slice(1).map((deal, index) => (
+						<div key={index}>
+							<div className="cursor-pointer group">
+								{/* Product image */}
+								<div className="mx-auto mb-4 overflow-hidden transition group-hover:scale-101">
+									<img
+										src={deal.image}
+										alt={deal.title}
+										className={cn(
+											"object-cover transition-opacity w-full h-full transform aspect-square group-hover:opacity-90",
+											index % 2
+												? "rotate-1 group-hover:-rotate-1"
+												: "group-hover:rotate-1"
+										)}
+									/>
+								</div>
+
+								{/* Product info */}
+								<div className="space-y-2 text-center">
+									<div className="mx-auto font-semibold tracking-widest text-gray-700 w-fit shadow-underline">
+										{deal.category}
+									</div>
+									<h3 className="font-semibold text-black transition-colors">
+										<span className="group-hover:shadow-underline">
+											{deal.title}
+										</span>
+									</h3>
+
+									<div className="flex items-center justify-center space-x-2">
+										<span className="text-lg font-bold text-c-green">
+											{deal.price}
+										</span>
+										<span className="text-sm text-gray-500 line-through">
+											{deal.originalPrice}
+										</span>
+										<span className="text-sm text-gray-600">{deal.source}</span>
+									</div>
+
+									{deal.note && (
+										<p className="text-sm text-gray-600">{deal.note}</p>
+									)}
+								</div>
+							</div>
+							<HorizontalDivider className="pl-8 mt-3" />
+						</div>
+					))}
 			</div>
 			<div className="flex justify-center mt-6">
 				<Button variant="line" className="mx-auto">

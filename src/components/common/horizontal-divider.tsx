@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import "./divider.scss";
+import styles from "./style.module.scss";
 
 export default function HorizontalDivider({
 	className,
@@ -7,6 +7,8 @@ export default function HorizontalDivider({
 	className?: string;
 }) {
 	return (
-		<div className={cn("h-px bg-repeat-x horizontal-divider", className)}></div>
+		<div
+			className={cn("h-px bg-repeat-x", styles.horizontalDivider, className)}
+		></div>
 	);
 }
