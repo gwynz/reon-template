@@ -1,16 +1,15 @@
-import { Article } from "@/_mock/articles";
-import HorizontalDivider from "@/components/common/horizontal-divider";
+import ArticleCategoryBox from "@/app/(index)/components/box/article-category-box";
 import VerticalDivider from "@/components/common/vertical-divider";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import React from "react";
 import TagRightIcon from "~/svg/icons/tag-right.svg";
-interface RowCategorySectionProps {
+interface RowArticleCategorySectionProps {
 	title: string;
 	subtitle: string;
 	articles: Article[];
 }
 
-const RowCategorySection: React.FC<RowCategorySectionProps> = ({
+const RowArticleCategorySection: React.FC<RowArticleCategorySectionProps> = ({
 	title,
 	subtitle,
 	articles,
@@ -48,35 +47,12 @@ const RowCategorySection: React.FC<RowCategorySectionProps> = ({
 			{/* Articles grid */}
 			<div className="grid grid-cols-3 gap-6">
 				{/* Large featured article */}
-				{articles.slice(0, 3).map((article, index) => (
-					<article key={article.title} className="cursor-pointer group">
-						<div className="mb-4 overflow-hidden bg-gray-100 aspect-video">
-							<img
-								src={article.image}
-								alt={article.title}
-								className="object-cover w-full h-full transition-transform duration-300 group-hover:opacity-90"
-							/>
-						</div>
-						<h3 className="mb-2 text-xl font-semibold leading-tight text-black transition-colors">
-							<span className="group-hover:shadow-underline">
-								{article.title}
-							</span>
-						</h3>
-						<div className="mb-3 text-sm text-gray-600">
-							<span className="font-medium tracking-wide uppercase text-c-yellow">
-								PUBLISHED {article.date}
-							</span>
-						</div>
-						<div className="mb-3 text-sm text-gray-600">
-							by{" "}
-							<span className="font-semibold text-black">{article.author}</span>
-						</div>
-						<p className="text-gray-700">{article.excerpt}</p>
-					</article>
+				{articles.slice(0, 3).map((article) => (
+					<ArticleCategoryBox key={article.id} article={article} size="md" />
 				))}
 			</div>
 		</section>
 	);
 };
 
-export default RowCategorySection;
+export default RowArticleCategorySection;
