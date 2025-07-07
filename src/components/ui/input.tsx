@@ -19,7 +19,7 @@ function Input({
 	...props
 }: InputProps) {
 	return (
-		<div className="relative flex items-center">
+		<div className={cn("relative flex items-center gap-2", className)}>
 			{LeftIcon && (
 				<LeftIcon
 					className={cn(
@@ -38,8 +38,7 @@ function Input({
 					"aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
 					LeftIcon && "pl-9", // Add padding for left icon
 					RightIcon && "pr-9", // Add padding for right icon
-					"shadow-[inset_2px_2px_3px_0_rgba(0,0,0,0.13)]",
-					className
+					"shadow-[inset_2px_2px_3px_0_rgba(0,0,0,0.13)]"
 				)}
 				{...props}
 			/>

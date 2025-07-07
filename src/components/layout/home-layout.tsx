@@ -7,9 +7,9 @@ export default function HomeLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<div className="bg-white container-fluid min-h-screen">
+		<div className="flex flex-col min-h-screen bg-white container-fluid">
 			<Header />
-			<div className="max-w-[1100px] mx-auto px-4">{children}</div>
+			<div className="max-w-[1100px] mx-auto px-4 flex-1">{children}</div>
 			<Footer />
 		</div>
 	);

@@ -7,7 +7,7 @@ import UnstyledLink from "@/components/links/UnstyledLink";
 
 const Header = () => {
 	return (
-		<header className="bg-white sticky top-0 z-50 max-w-[1100px] mx-auto px-4">
+		<header className="bg-white sticky top-0 z-50 max-w-[1100px] mx-auto px-4 w-full">
 			<div className="border-b border-gray-200">
 				{/* Top row with search, logo, and user actions */}
 				<div className="flex items-center justify-between h-16">

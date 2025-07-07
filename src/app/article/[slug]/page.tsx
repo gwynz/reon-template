@@ -107,7 +107,7 @@ const relatedProducts: Product[] = [
 	},
 ];
 
-const ArticlePage = ({ params: { slug } }: { params: { slug: string } }) => {
+const ArticlePage = () => {
 	return (
 		<div>
 			{/* Breadcrumb */}
@@ -128,13 +128,29 @@ const ArticlePage = ({ params: { slug } }: { params: { slug: string } }) => {
 			<article className="py-8">
 				{/* Article Header */}
 				<header className="mb-4">
-					<h1 className="mb-2 text-4xl font-bold leading-tight text-gray-900 md:text-5xl">
-						Optimize Your AC
-					</h1>
-
-					<div className="flex items-center justify-between mb-6">
-						<div className="text-sm text-gray-600">
-							<span>Published June 19, 2024</span>
+					<div className="flex items-center justify-between">
+						<div className="relative flex-1">
+							<h1 className="mb-2 text-4xl font-bold leading-tight text-gray-900 md:text-5xl">
+								Optimize Your AC
+							</h1>
+							<div className="flex items-center justify-between mb-6">
+								<div className="text-sm text-gray-600">
+									<span>Published June 19, 2024</span>
+								</div>
+							</div>
+							<VerticalDivider className="absolute top-0 bottom-0 right-0 shrink-0" />
+						</div>
+						<div className="px-8 text-lg">
+							<div>
+								<span className="mr-1 font-semibold">
+									{relatedProducts.length}
+								</span>
+								{`items in this article`}
+							</div>
+							<div>
+								<span className="mr-1 font-semibold text-red-400">{1}</span>
+								{`item on sale!`}
+							</div>
 						</div>
 					</div>
 				</header>
